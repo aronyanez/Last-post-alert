@@ -1,0 +1,39 @@
+
+
+
+.alert{
+	
+	width: 50%;
+	height: 100px;
+	background-color: #f5b83d;
+	top:0;
+	right: 0;
+	position: fixed;
+	display: table;
+	margin-top:50px;
+	text-align: center;
+	-vendor-animation-duration: 3s;
+	-vendor-animation-delay: 2s;
+}
+
+
+.title-post{
+	font-family: 'Anton', sans-serif;
+	font-size: 30px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+.title-post:hover{
+	color:blue;
+}
+
+.close{
+	font-family: 'Anton', sans-serif;
+	font-size: 15px;
+	position: absolute;
+	padding: 10px;
+	left:0; 
+	cursor:pointer;
+}
