@@ -14,15 +14,5 @@
  */
 defined( 'ABSPATH' ) or die( '' );
 
-
-
-function antes_de_sidebar ( $name ) 
-{
-echo "hola";
-
-}
-
-add_action( 'get_sidebar', 'antes_de_sidebar' );
-
-
+    include_once( 'public/index.php' );
 
