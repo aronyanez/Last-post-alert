@@ -52,15 +52,7 @@ function LPA_alert_code() {
 				echo "bounceOut";
 
 			?>" >
-			<a class="close" style="color:
-			<?php
-			$white="white";
-			if( get_option('LPA_colorletter'))
-				echo get_option('LPA_colorletter');
-			else
-				echo $white;
-
-			?>;" ><i class="far fa-times-circle"></i><?= _e('Close','last-post-alert');  ?></a>
+			
 			<a class="title-post" style="color:
 			<?php
 			
@@ -75,6 +67,17 @@ function LPA_alert_code() {
 			<i class="far fa-newspaper"></i>
 			<?= $recent['post_title'] ?></a>
 
+
+			<a class="close" style="color:
+			<?php
+			$white="white";
+			if( get_option('LPA_colorletter'))
+				echo get_option('LPA_colorletter');
+			else
+				echo $white;
+
+			?>;" ><i class="far fa-times-circle"></i><?= _e('Close','last-post-alert');  ?></a>
+			
 		</div>
 
 		<?php 
