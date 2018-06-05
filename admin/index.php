@@ -16,6 +16,8 @@ function LPA_styles_admin() {
 
 
 
+
+
 function LPA_create_admin_menu() {
 
 	add_menu_page (
@@ -27,47 +29,27 @@ function LPA_create_admin_menu() {
 function LPA_create_admin_menu_function() {
 	?>
 	<div class='wrap'>
-		<h2>Ajustes de la alerta</h2>
+		<h2>  <?= _e('Alert settings','last-post-alert'); ?></h2>
 		<form action="options.php" method="POST">
 			<?php
 			settings_fields('LPA_group');
 			do_settings_sections('LPA_group');
 			?>
-      <label>Texto a mostrar:</label>	
-      <input type="text"
-      name="LPA_text"
-      id="LPA_text"
-      value="<?php if (get_option('LPA_text'))
-        echo get_option('LPA_text');
-        else
-          echo "Exclusiva: ";
-
-      ?>">
-      <br>
-      <label>Color de Fondo</label>
+      <label><?= _e('Background color','last-post-alert');  ?></label>
       <input type="text"
       name="LPA_color" class="color" 
       id="LPA_color"
       value="<?= get_option('LPA_color'); ?>">
-      <label>Color de Letra</label>
+      <label><?= _e('Font color','last-post-alert');  ?></label>
       <input type="text"
-      name="LPA_colorletter" class="color" 
-      id="LPA_colorletter"
-      value="<?= get_option('LPA_colorletter'); ?>">
-      <label>Animación</label>
+      name="LPA_Fontcolor" class="color" 
+      id="LPA_Fontcolor"
+      value="<?= get_option('LPA_Fontcolor'); ?>">
+      <br>
+      <label><?= _e('Animation','last-post-alert');  ?></label>
       <select name="LPA_animationin" >
         <optgroup label="Attention Seekers">
-<<<<<<< HEAD
-          <option  value="bounce">bounce</option>
-          <option  <?php if ( get_option('LPA_animation') == 'flash' ) echo 'selected="selected"'; ?> value="flash">flash</option>
-          <option value="pulse">pulse</option>
-          <option value="rubberBand">rubberBand</option>
-          <option value="shake">shake</option>
-          <option value="swing">swing</option>
-          <option value="tada">tada</option>
-          <option value="wobble">wobble</option>
-          <option value="jello">jello</option>
-=======
+
           <option <?php if ( get_option('LPA_animationin') == 'bounce' ) echo 'selected="selected"'; ?> value="bounce">bounce</option>
           <option <?php if ( get_option('LPA_animationin') == 'flash' ) echo 'selected="selected"'; ?> value="flash">flash</option>
           <option <?php if ( get_option('LPA_animationin') == 'pulse' ) echo 'selected="selected"'; ?> value="pulse">pulse</option>
@@ -77,7 +59,7 @@ function LPA_create_admin_menu_function() {
           <option <?php if ( get_option('LPA_animationin') == 'tada' ) echo 'selected="selected"'; ?> value="tada">tada</option>
           <option <?php if ( get_option('LPA_animationin') == 'wooble' ) echo 'selected="selected"'; ?> value="wobble">wobble</option>
           <option <?php if ( get_option('LPA_animationin') == 'jello' ) echo 'selected="selected"'; ?> value="jello">jello</option>
->>>>>>> master
+
         </optgroup>
 
         <optgroup label="Bouncing Entrances">
@@ -122,8 +104,8 @@ function LPA_create_admin_menu_function() {
         
         
       </select>
-
-      <label>Animación Cierre</label>
+        
+      <label><?= _e('Exit animation','last-post-alert');  ?></label>
       <select name="LPA_animationout" >
        <optgroup label="Bouncing Exits">
         <option  <?php if ( get_option('LPA_animationout') == 'bounceOut' ) echo 'selected="selected"'; ?> value="bounceOut">bounceOut</option>
@@ -154,7 +136,7 @@ function LPA_settings(){
   );
 
   register_setting('LPA_group','LPA_color',$args);
-  register_setting('LPA_group','LPA_colorletter',$args);
+  register_setting('LPA_group','LPA_Fontcolor',$args);
   register_setting('LPA_group','LPA_text',$args);
   register_setting('LPA_group','LPA_animationin',$args);
   register_setting('LPA_group','LPA_animationout',$args);

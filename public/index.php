@@ -60,7 +60,7 @@ function LPA_alert_code() {
 			else
 				echo $white;
 
-			?>;" ><i class="far fa-times-circle"></i>Cerrar</a>
+			?>;" ><i class="far fa-times-circle"></i><?= _e('Close','last-post-alert');  ?></a>
 			<a class="title-post" style="color:
 			<?php
 			

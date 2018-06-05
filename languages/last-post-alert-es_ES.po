@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_419\n"
+
+#: last-post-alert.php:27
+msgid "Settings"
+msgstr "Opciones"
+
+#: public/index.php:63
+msgid "Close"
+msgstr "Cerrar"
+
+#: admin/index.php:32
+msgid "Alert settings"
+msgstr "Ajustes de Alerta"
+
+#: admin/index.php:38
+msgid "Background color"
+msgstr "Color de fondo"
+
+#: admin/index.php:43
+msgid "Font color"
+msgstr "Color de letra"
+
+#: admin/index.php:49
+msgid "Animation"
+msgstr "Animación"
+
+#: admin/index.php:108
+msgid "Exit animation"
+msgstr "Animación de salida"
