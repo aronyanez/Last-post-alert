@@ -71,7 +71,7 @@ function LPA_alert_code() {
 
 			?>;"
 
-			"href=" <?= get_permalink($recent['ID']) ?> "> 
+			href=" <?= get_permalink($recent['ID']) ?> "> 
 			<i class="far fa-newspaper"></i>
 			<?= $recent['post_title'] ?></a>
 
