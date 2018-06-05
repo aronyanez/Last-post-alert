@@ -52,8 +52,8 @@ function LPA_create_admin_menu_function() {
 			<label>Animación</label>
 		<select name="LPA_animation" >
         <optgroup label="Attention Seekers">
-          <option value="bounce">bounce</option>
-          <option value="flash">flash</option>
+          <option  value="bounce">bounce</option>
+          <option  <?php if ( get_option('LPA_animation') == 'flash' ) echo 'selected="selected"'; ?> value="flash">flash</option>
           <option value="pulse">pulse</option>
           <option value="rubberBand">rubberBand</option>
           <option value="shake">shake</option>
