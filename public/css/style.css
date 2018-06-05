@@ -10,10 +10,12 @@
 	right: 0;
 	position: fixed;
 	display: table;
-	margin-top:50px;
+	margin-top:0px;
 	text-align: center;
 	-vendor-animation-duration: 3s;
 	-vendor-animation-delay: 2s;
+	z-index: 999;
+	border-bottom-left-radius: 20px;
 }
 
 
@@ -22,7 +24,9 @@
 	font-size: 30px;
 	display: table-cell;
 	vertical-align: middle;
+	color:white;
 }
+
 
 
 .title-post:hover{

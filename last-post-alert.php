@@ -14,5 +14,6 @@
  */
 defined( 'ABSPATH' ) or die( '' );
 
-    include_once( 'public/index.php' );
+include_once( 'public/index.php' );
 
+include_once( 'admin/index.php' );

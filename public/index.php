@@ -2,13 +2,13 @@
 
 
 
-add_action( 'get_footer', 'alert_code', 10);
-add_action( 'wp_enqueue_scripts', 'styles' );
+add_action( 'get_footer', 'LPA_alert_code', 10);
+add_action( 'wp_enqueue_scripts', 'LPA_styles' );
 
 
 
 
-function styles() {
+function LPA_styles() {
 	wp_enqueue_style( 'style-custom', plugins_url( 'last-post-alert/public/css/style.css' ) );
 	wp_enqueue_style('Anton','https://fonts.googleapis.com/css?family=Anton');
 	wp_enqueue_style( 'animate', plugins_url( 'last-post-alert/public/css/animate.css' ) );
@@ -19,19 +19,19 @@ function styles() {
 
 
 
-function alert_code() {
+function LPA_alert_code() {
 	if (is_home()){
 		$args = array( 'numberposts' => '1' );
 		$recent_posts = wp_get_recent_posts( $args );
 		foreach( $recent_posts as $recent ){
 			?>
 
-			<div class="alert">
-			<a class="close" ><i class="far fa-times-circle"></i>Cerrar</a>
-			<a class="title-post" href=" <?= get_permalink($recent['ID']) ?> "> 
+			<div class="alert" style="background-color:<?= get_option('LPA_color') ?>;" data-animation="<?= get_option('LPA_animation') ?>" >
+			<a class="close" style="color:<?= get_option('LPA_colorletter') ?>;" ><i class="far fa-times-circle"></i>Cerrar</a>
+			<a class="title-post" style="color:<?= get_option('LPA_colorletter') ?>;"href=" <?= get_permalink($recent['ID']) ?> "> 
 			<i class="far fa-newspaper"></i>
 			<?= $recent['post_title'] ?></a>
-
+			
 			</div>
 
 			<?php 
