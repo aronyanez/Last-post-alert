@@ -6,15 +6,17 @@
 
 
 //show animation
-var animation=$('.alert').data('animation');
-$('.alert').addClass('animated '+ animation);
+var animationin=$('.alert').data('animationin');
+var animationout=$('.alert').data('animationout');
+$('.alert').addClass('animated '+ animationin);
 
 
 //close
-$('.close').addClass('animated bounce');
+//$('.close').addClass('animated bounce');
 
 $('.close').click(function() {
-  $('.alert').hide('fast');
+$(".alert").removeAttr('class').addClass("alert");
+  $('.alert').addClass('animated '+ animationout);
 });
 
 

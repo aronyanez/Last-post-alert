@@ -9,8 +9,8 @@
  * Requires at least: 4.0
  * Tested up to: 4.3
  *
- * Text Domain: Last Post Alert
- * Domain Path: /languages/
+ * Text Domain: LPA
+ * Domain Path: /languages
  */
 defined( 'ABSPATH' ) or die( '' );
 
