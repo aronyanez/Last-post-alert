@@ -10,11 +10,11 @@ msgstr ""
 "X-Generator: Poedit 2.0.8\n"
 "Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: es_419\n"
+"Language: es_ES\n"
 
 #: last-post-alert.php:27
 msgid "Settings"
-msgstr "Opciones"
+msgstr "Ajustes"
 
 #: public/index.php:63
 msgid "Close"
@@ -22,7 +22,7 @@ msgstr "Cerrar"
 
 #: admin/index.php:32
 msgid "Alert settings"
-msgstr "Ajustes de Alerta"
+msgstr "Ajustes de alerta"
 
 #: admin/index.php:38
 msgid "Background color"
@@ -39,3 +39,7 @@ msgstr "Animación"
 #: admin/index.php:108
 msgid "Exit animation"
 msgstr "Animación de salida"
+
+#: admin/index.php:108
+msgid "Plugin by"
+msgstr "Plugin por"

@@ -30,4 +30,6 @@ msgid "Exit animation"
 msgstr ""
 
 
-
+#: admin/index.php:108
+msgid "Plugin by"
+msgstr ""

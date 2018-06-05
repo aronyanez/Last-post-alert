@@ -8,12 +8,11 @@ add_action( 'admin_enqueue_scripts', 'LPA_styles_admin' );
 function LPA_styles_admin() {
 	wp_enqueue_style( 'wp-color-picker');
 	wp_enqueue_style( 'wp-color-picker' ); 
-	wp_enqueue_script( 'custom-script-admin', plugins_url( 'last-post-alert/admin/js/script.js' ), array( 'wp-color-picker' ), false, true ); 
+	wp_enqueue_script( 'custom-script-admin', plugins_url( 'last-post-alert/admin/js/script.js' ), array( 'wp-color-picker' ), false, true );
+  wp_enqueue_style( 'style-custom', plugins_url( 'last-post-alert/admin/css/style.css' ) );
+  wp_enqueue_style( 'wp-color-picker'); 
 
 }
-
-
-
 
 
 
@@ -121,7 +120,9 @@ function LPA_create_admin_menu_function() {
     <?= submit_button(); ?>
   </form>
 
-
+   <h3 class="credits"><?= _e('Plugin by','last-post-alert');  ?>
+     <a href="https://markdevs.com">Arón Yáñez</a>
+   </h3>
 </div>
 
 <?php
