@@ -26,17 +26,60 @@ function LPA_alert_code() {
 		foreach( $recent_posts as $recent ){
 			?>
 
-			<div class="alert" style="background-color:<?= get_option('LPA_color') ?>;" data-animation="<?= get_option('LPA_animation') ?>" >
-			<a class="close" style="color:<?= get_option('LPA_colorletter') ?>;" ><i class="far fa-times-circle"></i>Cerrar</a>
-			<a class="title-post" style="color:<?= get_option('LPA_colorletter') ?>;"href=" <?= get_permalink($recent['ID']) ?> "> 
+			<div class="alert" style="background-color:
+			<?php
+			if( get_option('LPA_color'))
+				echo get_option('LPA_color');
+			else
+				echo "black";
+
+			?>;"
+
+			data-animationin="
+			<?php
+			if( get_option('LPA_animationin'))
+				echo get_option('LPA_animationin');
+			else
+				echo "bounce";
+
+			?>"
+			
+			data-animationout="
+			<?php
+			if( get_option('LPA_animationout'))
+				echo get_option('LPA_animationout');
+			else
+				echo "bounceOut";
+
+			?>" >
+			<a class="close" style="color:
+			<?php
+			$white="white";
+			if( get_option('LPA_colorletter'))
+				echo get_option('LPA_colorletter');
+			else
+				echo $white;
+
+			?>;" ><i class="far fa-times-circle"></i>Cerrar</a>
+			<a class="title-post" style="color:
+			<?php
+			
+			if( get_option('LPA_colorletter'))
+				echo get_option('LPA_colorletter');
+			else
+				echo $white;
+
+			?>;"
+
+			"href=" <?= get_permalink($recent['ID']) ?> "> 
 			<i class="far fa-newspaper"></i>
 			<?= $recent['post_title'] ?></a>
-			
-			</div>
 
-			<?php 
+		</div>
 
-		}
-		wp_reset_query();
+		<?php 
+
 	}
+	wp_reset_query();
+}
 }
