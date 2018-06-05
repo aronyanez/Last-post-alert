@@ -11,7 +11,6 @@ You only need a site with wordpress and you should install a plugin .zip
 
 -WORDPRESS 4.9.x or higher version
 
-```
 
 
 ## Built With
